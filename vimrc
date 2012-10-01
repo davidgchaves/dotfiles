@@ -2,6 +2,7 @@
 
 " First (changes other options as a side effect)
 set nocompatible                " no compatibility with legacy vi.
+call pathogen#infect()          " pathogen config
 
 " General
 syntax on                       " enable syntax highlighting.
