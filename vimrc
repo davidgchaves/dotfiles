@@ -59,6 +59,12 @@ set t_ti= t_te=
 set shell=bash
 
 
+""" COLOR """
+set t_Co=256                    " set number of colors to 256
+set background=light            " you can switch between 'light' and 'dark
+colorscheme solarized
+
+
 """ KEY MAPS """
 
 nnoremap <leader><leader> <c-^> " switch to the previouly edited buffer, same as :b# command.
