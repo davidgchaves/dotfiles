@@ -58,6 +58,11 @@ set t_ti= t_te=
 " and https://rvm.io//integration/vim/
 set shell=bash
 
+" no more SHIFT + o delay please, check
+" http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
+" http://ksjoberg.com/vim-esckeys.html
+set noesckeys
+
 
 """ COLOR """
 set t_Co=256                    " set number of colors to 256
