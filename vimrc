@@ -69,7 +69,9 @@ colorscheme solarized
 
 nnoremap <leader><leader> <c-^> " switch to the previouly edited buffer, same as :b# command.
 imap <c-l> <space>=><space>     " insert a hashrocket
-cnoremap %% <C-R>=expand('%:h').'/'<cr>     " expand directory of current file.
+
+" expand directory of current file.
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 nnoremap <c-h> <c-w>h           " switch to the left Split.
 nnoremap <c-j> <c-w>j           " switch to the Split below.
