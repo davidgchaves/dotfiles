@@ -5,7 +5,8 @@ require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
-IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:PROMPT_MODE] = :MY_PROMPT
+IRB.conf[:AUTO_INDENT] = true
 
 %w[rubygems looksee/shortcuts wirble].each do |gem|
   begin
@@ -20,12 +21,6 @@ class Object
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
   
-  # print documentation
-  #
-  #   ri 'Array#pop'
-  #   Array.ri
-  #   Array.ri :pop
-  #   arr.ri :pop
   def ri(method = nil)
     unless method && method =~ /^[A-Z]/ # if class isn't specified
       klass = self.kind_of?(Class) ? name : self.class.name
@@ -50,3 +45,12 @@ end
 def paste
   `pbpaste`
 end
+
+# From Programming Ruby 1.9 Chapter 18 Interactive Ruby Shell
+#   irb --prompt my-prompt
+IRB.conf[:PROMPT][:MY_PROMPT] = { # name of prompt mode
+  PROMPT_I: '--> ',               # normal prompt
+  PROMPT_S: '--" ',               # prompt for continuing strings
+  PROMPT_C: '--+ ',               # prompt for continuing statements
+  RETURN: "    ==> %s\n"          # format to return value
+}
