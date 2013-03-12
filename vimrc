@@ -1,8 +1,8 @@
-""" Mostly from """
-""" https://github.com/garybernhardt/dotfiles/blob/master/.vimrc """
-""" https://github.com/mislav/vimfiles/blob/master/vimrc """
+"   Mostly from
+"   https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
+"   https://github.com/mislav/vimfiles/blob/master/vimrc
 
-"""" BASIC CONFIGURATION """
+"   BASIC CONFIGURATION
 
 " First (changes other options as a side effect)
 set nocompatible                " no compatibility with legacy vi.
@@ -47,7 +47,7 @@ set switchbuf=useopen           " when switching between buffers, jump to the fi
 let mapleader=","               " , is the <leader> key
 
 
-""" FIXES """ 
+"   FIXES
 
 " when going 'terminal > vim > terminal' don't clear terminal screen,
 " check http://www.shallowsky.com/linux/noaltscreen.html for info.
@@ -64,13 +64,14 @@ set shell=bash
 set noesckeys
 
 
-""" COLOR """
+"   COLOR
+
 set t_Co=256                    " set number of colors to 256
 set background=light            " you can switch between 'light' and 'dark
 colorscheme solarized
 
 
-""" KEY MAPS """
+"   KEY MAPS
 
 nnoremap <leader><leader> <c-^> " switch to the previouly edited buffer, same as :b# command.
 imap <c-l> <space>=><space>     " insert a hashrocket
@@ -116,7 +117,7 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 
 
-""" AUTOCMDS """
+"   AUTOCMDS
 
 augroup vimrcEx
     autocmd FileType text setlocal textwidth=78
@@ -134,11 +135,11 @@ augroup vimrcEx
 augroup END
 
 
-""" RAILS SPECIFIC MAPPINGS """
+"   RAILS SPECIFIC MAPPINGS
 map <leader>gr :topleft :split config/routes.rb<cr> " go to (r)outes.
 map <leader>gg :topleft 100 :split Gemfile<cr>      " go to (g)emfile.
 
-" Note to self: for ShowRoutes() to work you need the "set shell=bash" line.
+" Note to self: for ShowRoutes() to work you need the 'set shell=bash' line.
 function! ShowRoutes()
     " Requires 'scratch' plugin
     :topleft 100 :split __Routes__
@@ -158,7 +159,7 @@ endfunction
 map <leader>gR :call ShowRoutes()<cr>
 
 
-""" JUST IN CASE ... """
+"   JUST IN CASE ...
 map <left>  :echo "BURRO!"<cr>
 map <right> :echo "BURRO!"<cr>
 map <up>    :echo "BURRO!"<cr>
