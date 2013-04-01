@@ -67,7 +67,7 @@ set noesckeys
 "   COLOR
 
 set t_Co=256                    " set number of colors to 256
-set background=light            " you can switch between 'light' and 'dark
+set background=dark            " you can switch between 'light' and 'dark
 colorscheme solarized
 
 
