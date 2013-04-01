@@ -13,6 +13,3 @@
 [submodule "vim/bundle/vim-vroom"]
 	path = vim/bundle/vim-vroom
 	url = http://github.com/skalnik/vim-vroom.git
-[submodule "vim/bundle/vim-clojure"]
-	path = vim/bundle/vim-clojure
-	url = http://github.com/kotarak/vimclojure.git
