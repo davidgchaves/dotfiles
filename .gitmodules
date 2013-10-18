@@ -1,27 +1,36 @@
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+    ignore = dirty
 [submodule "vim/bundle/vim-colors-solarize"]
 	path = vim/bundle/vim-colors-solarize
 	url = http://github.com/altercation/vim-colors-solarized.git
+    ignore = dirty
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = http://github.com/vim-ruby/vim-ruby.git
+    ignore = dirty
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = http://github.com/tpope/vim-rails.git
+    ignore = dirty
 [submodule "vim/bundle/vim-vroom"]
 	path = vim/bundle/vim-vroom
 	url = http://github.com/skalnik/vim-vroom.git
+    ignore = dirty
 [submodule "vim/bundle/fireplace"]
 	path = vim/bundle/fireplace
 	url = https://github.com/tpope/vim-fireplace
+    ignore = dirty
 [submodule "vim/bundle/vim-classpath"]
 	path = vim/bundle/vim-classpath
 	url = https://github.com/tpope/vim-classpath
+    ignore = dirty
 [submodule "vim/bundle/vim-clojure-static"]
 	path = vim/bundle/vim-clojure-static
 	url = https://github.com/guns/vim-clojure-static
+    ignore = dirty
 [submodule "vim/bundle/vim-scala"]
 	path = vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala
+    ignore = dirty
