@@ -5,7 +5,8 @@ DISABLE_LS_COLORS="true"
 
 plugins=(git bundler brew gem rbates)
 
-export PATH="/usr/local/bin:$PATH"
+#export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source $ZSH/oh-my-zsh.sh
 
