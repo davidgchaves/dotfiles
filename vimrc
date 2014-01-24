@@ -63,6 +63,10 @@ set shell=bash
 " http://ksjoberg.com/vim-esckeys.html
 set noesckeys
 
+" trying to fix horrible defaults in html indentation
+" indent html, body, head and tbody tags
+let g:html_indent_inctags = "html,body,head,tbody,script"
+
 
 "   COLOR
 
