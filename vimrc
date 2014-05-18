@@ -10,7 +10,7 @@ call pathogen#infect()          " pathogen config
 
 " General
 syntax on                       " enable syntax highlighting.
-set showcmd		                " display incomplete commands.
+set showcmd                     " display incomplete commands.
 filetype plugin indent on       " load file type plugins + indentation.
 set backspace=indent,eol,start  " backspace through everything in Insert Mode.
 set showmatch                   " when a bracket is inserted, briefly jump to the matching one.
@@ -71,7 +71,7 @@ let g:html_indent_inctags = "html,body,head,tbody,script"
 "   COLOR
 
 set t_Co=256                    " set number of colors to 256
-set background=dark            " you can switch between 'light' and 'dark
+set background=dark             " you can switch between 'light' and 'dark
 colorscheme solarized
 
 
