@@ -1,17 +1,17 @@
-# Ryan Bates Dot Files
+# My Dot Files (forked from Ryan Bates)
 
-These are config files to set up a system the way I like it. It now uses [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh). If you would like to see my old, custom Bash and ZSH config, check out [this branch](https://github.com/ryanb/dotfiles/tree/custom-bash-zsh)
+These are config files to set up a system the way I like it. It now uses [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh).
 
 I am running on Mac OS X, but it will likely work on Linux as well.
 
 
 ## Installation
 
-Run the following commands in your terminal. It will prompt you before it does anything destructive. Check out the [Rakefile](https://github.com/ryanb/dotfiles/blob/custom-bash-zsh/Rakefile) to see exactly what it does.
+Run the following commands in your terminal. It will prompt you before it does anything destructive. Check out the [Rakefile](https://github.com/davidgchaves/dotfiles/blob/master/Rakefile) to see exactly what it does.
 
 ```terminal
-git clone git://github.com/ryanb/dotfiles ~/.dotfiles
-cd ~/.dotfiles
+git clone git://github.com/ryanb/dotfiles ~/dotfiles
+cd ~/dotfiles
 rake install
 ```
 
@@ -22,23 +22,9 @@ Feel free to customize the .zshrc file to match your preference.
 
 ## Features
 
-Many of the following features are added through the "rbates" Oh My ZSH plugin.
-
-I normally place all of my coding projects in ~/code, so this directory can easily be accessed (and tab completed) with the "c" command.
+Tab completion is added to rake and cap commands:
 
 ```terminal
-c railsca<tab>
-```
-
-There is also an "h" command which behaves similar, but acts on the home path.
-
-```terminal
-h doc<tab>
-```
-
-Tab completion is also added to rake and cap commands:
-
-```
 rake db:mi<tab>
 cap de<tab>
 ```
