@@ -4,19 +4,19 @@
     ignore = dirty
 [submodule "vim/bundle/vim-colors-solarize"]
     path = vim/bundle/vim-colors-solarize
-    url = http://github.com/altercation/vim-colors-solarized.git
+    url = https://github.com/altercation/vim-colors-solarized.git
     ignore = dirty
 [submodule "vim/bundle/vim-ruby"]
     path = vim/bundle/vim-ruby
-    url = http://github.com/vim-ruby/vim-ruby.git
+    url = https://github.com/vim-ruby/vim-ruby.git
     ignore = dirty
 [submodule "vim/bundle/vim-rails"]
     path = vim/bundle/vim-rails
-    url = http://github.com/tpope/vim-rails.git
+    url = https://github.com/tpope/vim-rails.git
     ignore = dirty
 [submodule "vim/bundle/vim-vroom"]
     path = vim/bundle/vim-vroom
-    url = http://github.com/skalnik/vim-vroom.git
+    url = https://github.com/skalnik/vim-vroom.git
     ignore = dirty
 [submodule "vim/bundle/fireplace"]
     path = vim/bundle/fireplace
@@ -40,5 +40,9 @@
     ignore = dirty
 [submodule "vim/bundle/vim-cucumber"]
     path = vim/bundle/vim-cucumber
-    url = http://github.com/tpope/vim-cucumber.git
+    url = https://github.com/tpope/vim-cucumber.git
+    ignore = dirty
+[submodule "vim/bundle/paredit"]
+    path = vim/bundle/paredit
+    url = https://github.com/kovisoft/paredit.git
     ignore = dirty
