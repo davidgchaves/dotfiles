@@ -46,3 +46,7 @@
     path = vim/bundle/paredit
     url = https://github.com/kovisoft/paredit.git
     ignore = dirty
+[submodule "vim/bundle/rainbow-parentheses"]
+    path = vim/bundle/rainbow-parentheses
+    url = https://github.com/kien/rainbow_parentheses.vim
+    ignore = dirty
