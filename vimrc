@@ -80,7 +80,7 @@ colorscheme solarized
 nnoremap <leader><leader> <c-^> " switch to the previouly edited buffer, same as :b# command.
 imap <c-l> <space>=><space>     " insert a hashrocket
 
-" expand directory of current file.
+" Expand directory of current file.
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 nnoremap <c-h> <c-w>h           " switch to the left Split.
@@ -173,6 +173,30 @@ function! ShowRoutes()
     :normal dd
 endfunction
 map <leader>gR :call ShowRoutes()<cr>
+
+
+"   RAINBOW_PARENTHESES.VIM CONFIG
+
+" Parentheses colours using Solarized
+let g:rbpt_colorpairs = [
+  \ [ '13', '#6c71c4'],
+  \ [ '5',  '#d33682'],
+  \ [ '1',  '#dc322f'],
+  \ [ '9',  '#cb4b16'],
+  \ [ '3',  '#b58900'],
+  \ [ '2',  '#859900'],
+  \ [ '6',  '#2aa198'],
+  \ [ '4',  '#268bd2'],
+  \ ]
+
+" Enable rainbow parentheses for parens (), brackets [] and braces {}
+augroup rainbow_parentheses
+  au!
+  au VimEnter * RainbowParenthesesToggle
+  au Syntax * RainbowParenthesesLoadRound
+  au Syntax * RainbowParenthesesLoadSquare
+  au Syntax * RainbowParenthesesLoadBraces
+augroup END
 
 
 "   JUST IN CASE ...
