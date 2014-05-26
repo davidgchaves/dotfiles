@@ -204,3 +204,9 @@ map <left>  :echo "BURRO!"<cr>
 map <right> :echo "BURRO!"<cr>
 map <up>    :echo "BURRO!"<cr>
 map <down>  :echo "BURRO!"<cr>
+
+
+"   VIM-VROOM CONFIG
+
+" Set cucumber default path (use 'bundle install --binstubs')
+let g:vroom_cucumber_path="bin/cucumber"
