@@ -137,7 +137,7 @@ endfunction
 
 augroup vimrcEx
     autocmd FileType text setlocal textwidth=78
-    autocmd FileType ruby,eruby,haml,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+    autocmd FileType ruby,eruby,haml,yaml,html,javascript,sass,cucumber,coffee,eco set ai sw=2 sts=2 et
 
     " Remember last location in file except for commit messages, check :help last-position-jump
     autocmd BufReadPost *
