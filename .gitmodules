@@ -50,3 +50,7 @@
     path = vim/bundle/rainbow-parentheses
     url = https://github.com/kien/rainbow_parentheses.vim
     ignore = dirty
+[submodule "vim/bundle/vim-coffescript"]
+    path = vim/bundle/vim-coffescript
+    url = https://github.com/kchmck/vim-coffee-script.git
+    ignore = dirty
