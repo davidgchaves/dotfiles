@@ -54,3 +54,7 @@
     path = vim/bundle/vim-coffescript
     url = https://github.com/kchmck/vim-coffee-script.git
     ignore = dirty
+[submodule "vim/bundle/vim-colors-solarized"]
+    path = vim/bundle/vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
+    ignore = dirty
