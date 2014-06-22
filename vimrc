@@ -6,7 +6,30 @@
 
 " First (changes other options as a side effect)
 set nocompatible                " no compatibility with legacy vi.
-call pathogen#infect()          " pathogen config
+
+" Vundle setup and plugins
+filetype off
+set rtp+=~/.vim/bundle/vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'kovisoft/paredit'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-cucumber'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'skalnik/vim-vroom'
+
+call vundle#end()
 
 " General
 syntax on                       " enable syntax highlighting.
