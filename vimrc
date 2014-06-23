@@ -28,6 +28,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'skalnik/vim-vroom'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
