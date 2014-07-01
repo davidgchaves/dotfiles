@@ -29,6 +29,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'skalnik/vim-vroom'
 Plugin 'tpope/vim-surround'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
