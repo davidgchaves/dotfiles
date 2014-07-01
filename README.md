@@ -10,7 +10,7 @@ I am running on Mac OS X, but it will likely work on Linux as well.
 Run the following commands in your terminal. It will prompt you before it does anything destructive. Check out the [Rakefile](https://github.com/davidgchaves/dotfiles/blob/master/Rakefile) to see exactly what it does.
 
 ```terminal
-git clone --recursive git://github.com/davidgchaves/dotfiles ~/dotfiles
+git clone git://github.com/davidgchaves/dotfiles ~/dotfiles
 cd ~/dotfiles
 rake install
 ```
@@ -18,6 +18,15 @@ rake install
 After installing, open a new terminal window to see the effects.
 
 Feel free to customize the .zshrc file to match your preference.
+
+
+## Vim bundles
+
+Run the following command in your terminal to install vim bundles with [Vundle.vim](https://github.com/gmarik/Vundle.vim)
+
+```terminal
+vim +PluginInstall +qall
+```
 
 
 ## Features
