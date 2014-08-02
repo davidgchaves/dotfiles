@@ -4,39 +4,61 @@
 
 "   BASIC CONFIGURATION
 
-" First (changes other options as a side effect)
-set nocompatible                " no compatibility with legacy vi.
+"
+" ---------- NeoBundle Scripts ---------
+"
 
-" Vundle setup and plugins
-filetype off
-set rtp+=~/.vim/bundle/vundle.vim
-call vundle#begin()
+if has('vim_starting')
+  " First (changes other options as a side effect)
+  set nocompatible               " no compatibility with legacy vi.
 
-Plugin 'gmarik/Vundle.vim'
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fireplace'
-Plugin 'kovisoft/paredit'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'tpope/vim-classpath'
-Plugin 'guns/vim-clojure-static'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-cucumber'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'skalnik/vim-vroom'
-Plugin 'tpope/vim-surround'
-Plugin 'pangloss/vim-javascript'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle'))
 
-call vundle#end()
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+NeoBundle 'rking/ag.vim'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'kovisoft/paredit'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'tpope/vim-classpath'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'skalnik/vim-vroom'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'pangloss/vim-javascript'
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin indent on       " load file type plugins + indentation.
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+"
+" ---------- End NeoBundle Scripts ---------
+"
+
 
 " General
 syntax on                       " enable syntax highlighting.
 set showcmd                     " display incomplete commands.
-filetype plugin indent on       " load file type plugins + indentation.
 set backspace=indent,eol,start  " backspace through everything in Insert Mode.
 set showmatch                   " when a bracket is inserted, briefly jump to the matching one.
 
