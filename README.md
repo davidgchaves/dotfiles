@@ -20,12 +20,13 @@ After installing, open a new terminal window to see the effects.
 Feel free to customize the .zshrc file to match your preference.
 
 
-## Vim bundles
+## Managing Vim plugins with NeoBundle
 
-Run the following command in your terminal to install vim bundles with [Vundle.vim](https://github.com/gmarik/Vundle.vim)
+Run the following commands in your terminal to install [NeoBundle.vim](https://github.com/Shougo/neobundle.vim) and vim plugins
 
 ```terminal
-vim +PluginInstall +qall
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+vim +NeoBundleInstall +qall
 ```
 
 
