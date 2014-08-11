@@ -5,8 +5,9 @@ DISABLE_LS_COLORS="true"
 
 plugins=(git bundler brew gem rbates)
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # Homebrew related
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"     # Homebrew related
+PATH="$PATH:$HOME/.rvm/bin"                     # Add RVM to PATH for scripting
+export PATH="$HOME/Library/Haskell/bin:$PATH"   # Haskell related (needed for Cabal and PureScript)
 
 source $ZSH/oh-my-zsh.sh
 
