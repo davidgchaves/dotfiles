@@ -40,6 +40,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'skalnik/vim-vroom'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'raichoo/purescript-vim'
 
 " Required:
 call neobundle#end()
