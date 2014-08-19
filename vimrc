@@ -41,6 +41,7 @@ NeoBundle 'skalnik/vim-vroom'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'raichoo/purescript-vim'
+NeoBundle 'etnadji/vim-epub'
 
 " Required:
 call neobundle#end()
