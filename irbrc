@@ -5,7 +5,6 @@ require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
-IRB.conf[:PROMPT_MODE] = :MY_PROMPT
 IRB.conf[:AUTO_INDENT] = true
 
 %w[rubygems looksee/shortcuts wirble].each do |gem|
@@ -45,12 +44,3 @@ end
 def paste
   `pbpaste`
 end
-
-# From Programming Ruby 1.9 Chapter 18 Interactive Ruby Shell
-#   irb --prompt my-prompt
-IRB.conf[:PROMPT][:MY_PROMPT] = { # name of prompt mode
-  PROMPT_I: '--> ',               # normal prompt
-  PROMPT_S: '--" ',               # prompt for continuing strings
-  PROMPT_C: '--+ ',               # prompt for continuing statements
-  RETURN: "    ==> %s\n"          # format to return value
-}
