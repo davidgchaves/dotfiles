@@ -126,16 +126,27 @@ colorscheme solarized
 
 "   KEY MAPS
 
-nnoremap <leader><leader> <c-^> " switch to the previouly edited buffer, same as :b# command.
-imap <c-l> <space>=><space>     " insert a hashrocket
+" switch to the previouly edited buffer, same as :b# command.
+nnoremap <leader><leader> <c-^>
+
+" insert a hashrocket
+imap <c-l> <space>=><space>
 
 " Expand directory of current file.
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-nnoremap <c-h> <c-w>h           " switch to the left Split.
-nnoremap <c-j> <c-w>j           " switch to the Split below.
-nnoremap <c-k> <c-w>k           " switch to the Split above.
-nnoremap <c-l> <c-w>l           " switch to the right Split.
+" switch to the left Split.
+nnoremap <c-h> <c-w>h
+" switch to the Split below.
+nnoremap <c-j> <c-w>j
+" switch to the Split above.
+nnoremap <c-k> <c-w>k
+" switch to the right Split.
+nnoremap <c-l> <c-w>l
+
+" activate the 'very magic' search mode by default
+nnoremap / /\v
+
 
 " Clear the search buffer when hitting RETURN
 function! MapCR()
