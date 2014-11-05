@@ -139,9 +139,6 @@ nnoremap <c-k> <c-w>k
 " switch to the right Split.
 nnoremap <c-l> <c-w>l
 
-" activate the 'very magic' search mode by default
-nnoremap / /\v
-
 
 " Clear the search buffer when hitting RETURN
 function! MapCR()
