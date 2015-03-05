@@ -262,3 +262,10 @@ map <down>  :echo "BURRO!"<cr>
 
 " Set cucumber default path (use 'bundle install --binstubs')
 let g:vroom_cucumber_path="bin/cucumber"
+
+
+"   CTRLP CONFIG
+
+" Ignore files: https://github.com/kien/ctrlp.vim/issues/273
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
