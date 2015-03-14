@@ -43,6 +43,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'raichoo/purescript-vim'
 NeoBundle 'etnadji/vim-epub'
 NeoBundle 'tpope/vim-sensible'
+NeoBundle 'wookiehangover/jshint.vim'
 
 " Required:
 call neobundle#end()
