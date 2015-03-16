@@ -51,7 +51,7 @@ def link_file(file)
 end
 
 def switch_to_zsh
-  using_zsh? ? puts "using zsh" : begin_switch_to_zsh_process
+  using_zsh? ? puts("using zsh") : begin_switch_to_zsh_process
 end
 
 def using_zsh?
