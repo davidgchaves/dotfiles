@@ -4,7 +4,6 @@ require 'erb'
 desc "install the dot files into user's home directory"
 task :install do
   install_oh_my_zsh
-  switch_to_zsh
   replace_all = false
   files = Dir['*'] - %w[Rakefile README.rdoc LICENSE oh-my-zsh]
   files << "oh-my-zsh/custom/rbates.zsh-theme"
@@ -47,27 +46,6 @@ end
 def link_file(file)
   puts "linking ~/.#{file}"
   system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
-end
-
-def switch_to_zsh
-  using_zsh? ? puts("using zsh") : begin_switch_to_zsh_process
-end
-
-def using_zsh?
-  ENV["SHELL"] =~ /zsh/
-end
-
-def begin_switch_to_zsh_process
-  print "switch to zsh? (recommended) [ynq] "
-  case $stdin.gets.chomp
-  when 'y'
-    puts "switching to zsh"
-    system %Q{chsh -s `which zsh`}
-  when 'q'
-    exit
-  else
-    puts "skipping zsh"
-  end
 end
 
 def install_oh_my_zsh
