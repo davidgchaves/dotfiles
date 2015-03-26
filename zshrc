@@ -17,3 +17,7 @@ export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
+alias gulp='./node_modules/.bin/gulp'
+alias browserify='./node_modules/.bin/browserify'
+
