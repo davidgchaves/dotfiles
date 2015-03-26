@@ -43,6 +43,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'raichoo/purescript-vim'
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'wookiehangover/jshint.vim'
+NeoBundle 'zenorocha/dracula-theme'
 
 " Required:
 call neobundle#end()
@@ -115,8 +116,6 @@ let g:html_indent_inctags = "html,body,head,tbody,script"
 "   COLOR
 
 set t_Co=256                    " set number of colors to 256
-set background=dark             " you can switch between 'light' and 'dark
-colorscheme solarized
 
 
 "   KEY MAPS
