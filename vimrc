@@ -31,7 +31,6 @@ NeoBundle 'kovisoft/paredit'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'tpope/vim-classpath'
 NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'elixir-lang/vim-elixir'
@@ -39,11 +38,17 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'skalnik/vim-vroom'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'raichoo/purescript-vim'
 NeoBundle 'tpope/vim-sensible'
-NeoBundle 'wookiehangover/jshint.vim'
 NeoBundle 'zenorocha/dracula-theme'
+
+" JS, HTML and CSS Related
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'raichoo/purescript-vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'wookiehangover/jshint.vim'
 
 " Required:
 call neobundle#end()
@@ -267,4 +272,10 @@ let g:vroom_cucumber_path="bin/cucumber"
 
 " Ignore files: https://github.com/kien/ctrlp.vim/issues/273
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+
+"   VIM-JSX CONFIG
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
 
