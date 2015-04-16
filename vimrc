@@ -131,7 +131,7 @@ nnoremap <leader><leader> <c-^>
 " insert a hashrocket
 imap <c-l> <space>=><space>
 
-" Expand directory of current file.
+" expand directory of current file.
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " switch to the left Split.
@@ -143,6 +143,9 @@ nnoremap <c-k> <c-w>k
 " switch to the right Split.
 nnoremap <c-l> <c-w>l
 
+" bind K to grep word under cursor
+" from https://robots.thoughtbot.com/faster-grepping-in-vim
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Clear the search buffer when hitting RETURN
 function! MapCR()
