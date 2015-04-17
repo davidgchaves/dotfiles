@@ -24,22 +24,27 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'rking/ag.vim'
+NeoBundle 'tpope/vim-sensible'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'kovisoft/paredit'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'tpope/vim-classpath'
-NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'zenorocha/dracula-theme'
+
+" Ruby Related
 NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'skalnik/vim-vroom'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-sensible'
-NeoBundle 'zenorocha/dracula-theme'
+
+" Functional (Clojure, Haskell, Scala, Elixir) Related
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'derekwyatt/vim-scala'
 
 " JS, HTML and CSS Related
 NeoBundle 'pangloss/vim-javascript'
