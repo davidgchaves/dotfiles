@@ -53,7 +53,6 @@ NeoBundle 'raichoo/purescript-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'wookiehangover/jshint.vim'
 
 " Required:
 call neobundle#end()
