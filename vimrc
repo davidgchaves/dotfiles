@@ -79,7 +79,7 @@ set cursorline                  " highlight the screen line of the cursor.
 set cmdheight=2                 " two lines for the command-line.
 set showtabline=2               " always display the line w/ tab page labels.
 set winwidth=79                 " 79 columns for the current window.
-set scrolloff=3                 " keep at least 3 lines above and below cursor.
+set scrolloff=8                 " keep at least 8 lines above and below cursor.
 set wildmode=list,full          " list all matches without completing, then each full match
 
 " Whitespace
