@@ -100,6 +100,8 @@ set switchbuf=useopen           " when switching between buffers, jump to the fi
 " Leader
 let mapleader=","               " , is the <leader> key
 
+" I don't like it when the matching parens are automatically highlighted
+let loaded_matchparen = 1
 
 "   FIXES
 
