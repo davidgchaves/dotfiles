@@ -204,6 +204,9 @@ augroup vimrcEx
     " Autowrap for md files (README.md basically)
     autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
+    " Autowrap for rdoc files (README.rdoc basically)
+    autocmd BufRead,BufNewFile *.rdoc setlocal textwidth=80
+
     autocmd FileType text setlocal textwidth=78
     autocmd FileType ruby,eruby,haml,yaml,html,javascript,sass,cucumber,coffee,eco set ai sw=2 sts=2 et
 
