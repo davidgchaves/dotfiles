@@ -4,6 +4,7 @@
 
 "   BASIC CONFIGURATION
 
+runtime macros/matchit.vim
 "
 " ---------- NeoBundle Scripts ---------
 "
@@ -31,12 +32,16 @@ NeoBundle 'kovisoft/paredit'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'tpope/vim-classpath'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'zenorocha/dracula-theme'
 
 " Ruby Related
 NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-rake'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'skalnik/vim-vroom'
 
