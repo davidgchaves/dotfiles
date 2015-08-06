@@ -7,6 +7,9 @@ plugins=(git bundler brew gem rbates)
 # RVM related
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Homebrew related
+export PATH="/usr/local/sbin:$PATH"
+
 # Haskell related (needed for Cabal and PureScript)
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
