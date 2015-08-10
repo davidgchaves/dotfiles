@@ -22,6 +22,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias gulp='./node_modules/.bin/gulp'
 alias browserify='./node_modules/.bin/browserify'
+alias webpack='./node_modules/.bin/webpack'
 
 ##############################################
 # Manually configure VI Mode                 #
