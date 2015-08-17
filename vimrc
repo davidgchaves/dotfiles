@@ -36,6 +36,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'zenorocha/dracula-theme'
+NeoBundle 'scrooloose/syntastic'
 
 " Ruby Related
 NeoBundle 'tpope/vim-cucumber'
@@ -301,6 +302,15 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+"   SYNTASTIC CONFIG
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "   JUST IN CASE ...
 map <left>  :echo "BURRO!"<cr>
