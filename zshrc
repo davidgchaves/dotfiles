@@ -21,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias gulp='./node_modules/.bin/gulp'
+alias bower='./node_modules/.bin/bower'
 alias browserify='./node_modules/.bin/browserify'
 alias webpack='./node_modules/.bin/webpack'
 
