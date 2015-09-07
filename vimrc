@@ -45,6 +45,7 @@ NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rake'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'skalnik/vim-vroom'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 " Functional (Clojure, Haskell, Scala, Elixir) Related
 NeoBundle 'tpope/vim-fireplace'
