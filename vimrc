@@ -213,6 +213,9 @@ augroup vimrcEx
     " Autowrap for rdoc files (README.rdoc basically)
     autocmd BufRead,BufNewFile *.rdoc setlocal textwidth=80
 
+    " Be nice with ejs files, pretty please
+    autocmd BufNewFile,BufRead *.ejs set filetype=html
+
     autocmd FileType text setlocal textwidth=78
     autocmd FileType ruby,eruby,haml,yaml,html,javascript,sass,cucumber,coffee,eco set ai sw=2 sts=2 et
 
