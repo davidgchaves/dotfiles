@@ -55,3 +55,6 @@ bindkey '^r' history-incremental-search-backward
 # Kill the lag
 export KEYTIMEOUT=1
 
+
+# zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
