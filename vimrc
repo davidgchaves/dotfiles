@@ -60,6 +60,7 @@ NeoBundle 'raichoo/purescript-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'lambdatoast/elm.vim'
 
 " Required:
 call neobundle#end()
@@ -318,9 +319,13 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 
+"   ELM.VIM CONFIG
+nnoremap <leader>eel  :ElmEvalLine<CR>
+vnoremap <leader>ees  :<C-u>ElmEvalSelection<CR>
+nnoremap <leader>emcf :ElmMakeCurrentFile<CR>
+
 "   JUST IN CASE ...
 map <left>  :echo "BURRO!"<cr>
 map <right> :echo "BURRO!"<cr>
 map <up>    :echo "BURRO!"<cr>
 map <down>  :echo "BURRO!"<cr>
-
