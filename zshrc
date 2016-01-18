@@ -27,6 +27,7 @@ source $ZSH/oh-my-zsh.sh
 alias bower='./node_modules/.bin/bower'
 alias browserify='./node_modules/.bin/browserify'
 alias gulp='./node_modules/.bin/gulp'
+alias nodemon='./node_modules/.bin/nodemon'
 alias surge='./node_modules/.bin/surge'
 alias webpack='./node_modules/.bin/webpack'
 
