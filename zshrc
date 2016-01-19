@@ -30,6 +30,7 @@ alias gulp='./node_modules/.bin/gulp'
 alias nodemon='./node_modules/.bin/nodemon'
 alias surge='./node_modules/.bin/surge'
 alias webpack='./node_modules/.bin/webpack'
+alias webpack-dev-server='./node_modules/.bin/webpack-dev-server'
 
 ##############################################
 # Manually configure VI Mode                 #
