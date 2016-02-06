@@ -319,6 +319,9 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+
 "   ELM.VIM CONFIG
 nnoremap <leader>eel  :ElmEvalLine<CR>
 vnoremap <leader>ees  :<C-u>ElmEvalSelection<CR>
