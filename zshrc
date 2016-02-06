@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias bower='./node_modules/.bin/bower'
 alias browserify='./node_modules/.bin/browserify'
+alias elm='./node_modules/.bin/elm'
 alias gulp='./node_modules/.bin/gulp'
 alias karma='./node_modules/.bin/karma'
 alias nodemon='./node_modules/.bin/nodemon'
