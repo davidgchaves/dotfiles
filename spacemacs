@@ -35,6 +35,7 @@ values."
      emacs-lisp
      erlang
      elixir
+     elm
      git
      html
      javascript
