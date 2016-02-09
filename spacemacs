@@ -248,10 +248,6 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
-   ;; Adjust JavaScript indentation level (2 spaces)
-   js2-basic-offset 2
-   ;; Adjust JSON indentation level (2 spaces)
-   js-indent-level 2
    ))
 
 (defun dotspacemacs/user-init ()
@@ -259,7 +255,12 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
-  )
+  (setq-default
+   ;; Adjust JavaScript indentation level (2 spaces)
+   js2-basic-offset 2
+   ;; Adjust JSON indentation level (2 spaces)
+   js-indent-level 2
+   ))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
