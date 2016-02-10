@@ -255,11 +255,18 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+
   (setq-default
    ;; Adjust JavaScript indentation level (2 spaces)
    js2-basic-offset 2
    ;; Adjust JSON indentation level (2 spaces)
    js-indent-level 2
+   ;; web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2
    ))
 
 (defun dotspacemacs/user-config ()
