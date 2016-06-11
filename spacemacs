@@ -280,6 +280,14 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
+  (spacemacs|use-package-add-hook flycheck
+    :post-config
+    (progn
+      (flycheck-add-mode 'javascript-standard 'react-mode)
+      (setq-default
+       flycheck-disabled-checkers (append flycheck-disabled-checkers
+                                          '(javascript-eslint)))))
+      ;;))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
