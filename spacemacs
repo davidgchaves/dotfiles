@@ -254,6 +254,11 @@ in `dotspacemacs/user-config'."
   (setq-default
    ;; Adjust JavaScript indentation level (2 spaces)
    js2-basic-offset 2
+
+   ;; Disable missing semicolon warning (better xp with standard)
+   ;; http://stackoverflow.com/questions/35162106/how-to-disable-js2-mode-syntax-checking-globally-in-spacemacs
+   js2-strict-missing-semi-warning nil
+
    ;; Adjust JSON indentation level (2 spaces)
    js-indent-level 2
 
