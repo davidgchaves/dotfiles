@@ -1,3 +1,7 @@
 vim/.netrwhist
 vim/.VimballRecord
 /vim/bundle/*
+
+## NeoVim symbolic links
+vim/.vim
+vim/init.vim
