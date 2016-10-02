@@ -1,14 +1,12 @@
-# oh-my-zsh
-ZSH=$HOME/oh-my-zsh
-DISABLE_AUTO_UPDATE="true"
+source $(brew --prefix)/share/antigen/antigen.zsh
 
-plugins=(git brew)
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle robbyrussell/oh-my-zsh plugins/git
 
-source $ZSH/oh-my-zsh.sh
-
-# Pure
-autoload -U promptinit; promptinit
-prompt pure
+antigen apply
 
 # RVM related
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -65,7 +63,3 @@ bindkey '^r' history-incremental-search-backward
 
 # Kill the lag
 export KEYTIMEOUT=1
-
-
-# zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
