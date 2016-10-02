@@ -1,8 +1,14 @@
+# oh-my-zsh
 ZSH=$HOME/oh-my-zsh
-ZSH_THEME="dracula"
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git bundler brew gem rbates)
+plugins=(git brew)
+
+source $ZSH/oh-my-zsh.sh
+
+# Pure
+autoload -U promptinit; promptinit
+prompt pure
 
 # RVM related
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -20,8 +26,6 @@ export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 # NVM (Node and io) related
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-
-source $ZSH/oh-my-zsh.sh
 
 # Cask (emacs)
 export PATH="$HOME/.cask/bin:$PATH"
