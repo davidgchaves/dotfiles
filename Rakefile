@@ -1,71 +1,93 @@
 require 'rake'
-require 'erb'
 
-desc "install the dot files into user's home directory"
+desc "install the dotfiles into user's home directory"
 task :install do
-  install_oh_my_zsh
-  replace_all = false
-  files = Dir['*'] - %w[Rakefile README.rdoc LICENSE oh-my-zsh]
-  files.each do |file|
-    system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
-    if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
-      if File.identical? file, File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}")
-        puts "identical ~/.#{file.sub(/\.erb$/, '')}"
-      elsif replace_all
-        replace_file(file)
+  link_dotfiles dotfiles_in_repository
+end
+
+desc "uninstall the dotfiles in user's home directory"
+task :uninstall do
+  unlink_dotfiles dotfiles_in_repository
+end
+
+def dotfiles_in_repository
+  all_files_and_dirs_in_repository = Dir['*']
+  not_dotfiles = %w[Rakefile README.md LICENSE iterm2-colors-solarized]
+
+  all_files_and_dirs_in_repository - not_dotfiles
+end
+
+def link_dotfiles(dotfiles)
+  dotfiles.each do |dotfile_to_link|
+    if already_exist? dotfile_to_link
+      if is_identical? dotfile_to_link
+        skip_identical_file dotfile_to_link
       else
-        print "overwrite ~/.#{file.sub(/\.erb$/, '')}? [ynaq] "
-        case $stdin.gets.chomp
-        when 'a'
-          replace_all = true
-          replace_file(file)
-        when 'y'
-          replace_file(file)
-        when 'q'
-          exit
-        else
-          puts "skipping ~/.#{file.sub(/\.erb$/, '')}"
-        end
+        to_override_or_not_to_override! dotfile_to_link
       end
     else
-      link_file(file)
+      link_file_or_directory! dotfile_to_link
     end
   end
 end
 
-def replace_file(file)
-  delete_file(file)
-  link_file(file)
-end
-
-def delete_file
-  system %Q{rm -rf "$HOME/.#{file.sub(/\.erb$/, '')}"}
-end
-
-def link_file(file)
-  puts "linking ~/.#{file}"
-  system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
-end
-
-def install_oh_my_zsh
-  oh_my_zsh_installed? ? puts("found oh-my-zsh") : begin_oh_my_zsh_installation_process
-end
-
-def oh_my_zsh_installed?
-  File.exist?(File.join(ENV['HOME'], "oh-my-zsh")) || File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
-end
-
-def begin_oh_my_zsh_installation_process
-  print "install oh-my-zsh? [ynq] "
-
-  case $stdin.gets.chomp
-  when 'y'
-    puts "installing oh-my-zsh in $HOME/oh-my-zsh"
-    system %Q{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/oh-my-zsh"}
-  when 'q'
-    exit
-  else
-    puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
+def unlink_dotfiles(dotfiles)
+  dotfiles.each do |dotfile_to_unlink|
+    puts "unlinking ~/.#{dotfile_to_unlink}"
+    system %Q{unlink "$HOME/.#{dotfile_to_unlink}"}
   end
 end
 
+def already_exist?(dotfile)
+  dotfile_on_disk = File.join(ENV['HOME'], ".#{dotfile}")
+  File.exist? dotfile_on_disk
+end
+
+def is_identical?(dotfile)
+  dotfile_on_disk = File.join(ENV['HOME'], ".#{dotfile}")
+  File.identical? dotfile, dotfile_on_disk
+end
+
+def to_override_or_not_to_override!(dotfile)
+  print "Do you want to overwrite existing ~/.#{dotfile}? [(y)es, (n)o, (q)uit] "
+
+  option = $stdin.gets.chomp
+
+  case option
+  when 'y'
+    replace_file!(dotfile)
+  when 'n'
+    skip_file(dotfile)
+  when 'q'
+    abort_execution
+  else
+    skip_file(dotfile)
+  end
+end
+
+def replace_file!(dotfile)
+  delete_file!(dotfile)
+  link_file_or_directory!(dotfile)
+end
+
+def delete_file!(dotfile)
+  system %Q{rm -rf "$HOME/.#{dotfile}"}
+end
+
+def link_file_or_directory!(dotfile)
+  puts "linking ~/.#{dotfile}"
+  system %Q{ln -s "$PWD/#{dotfile}" "$HOME/.#{dotfile}"}
+end
+
+def skip_file(dotfile)
+  puts "skipping ~/.#{dotfile}"
+end
+
+def skip_identical_file(dotfile)
+  puts "skipping identical ~/.#{dotfile}"
+end
+
+def abort_execution
+  puts "aborting..."
+  exit
+end
