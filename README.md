@@ -1,83 +1,77 @@
-# My Dot Files (forked from Ryan Bates')
-
-These are config files to set up a system the way I like it. It now uses [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh).
-
-I am running on Mac OS X, but it will likely work on Linux as well.
-
+# dotfiles (originally forked from Ryan Bates' dotfiles)
 
 ## Installation
 
-Run the following commands in your terminal. It will prompt you before it does anything destructive. Check out the [Rakefile](https://github.com/davidgchaves/dotfiles/blob/master/Rakefile) to see exactly what it does.
+Clone the repo and `rake install`:
 
-```sh
-git clone git://github.com/davidgchaves/dotfiles ~/dotfiles
-cd ~/dotfiles
-rake install
-```
-
-##  Change your default shell to zsh
-
-If you happen to install zsh with [Homebrew](http://brew.sh/), you need to (sudo) edit /etc/shells and add the line /usr/local/bin/zsh.
-Finally simply run this command in your terminal:
-
-```sh
-chsh -s /usr/local/bin/zsh
-```
-
-In case you decide to go with OS X default zsh, just:
-
-```sh
-chsh -s /bin/zsh
+```console
+❯ git clone git://github.com/davidgchaves/dotfiles ~/dotfiles
+❯ cd ~/dotfiles
+❯ rake install
 ```
 
 
-## Managing Vim plugins with NeoBundle
+##  Install latest `zsh` and `antigen`
 
-Run the following two commands in your terminal to install [NeoBundle.vim](https://github.com/Shougo/neobundle.vim) and vim plugins:
+Install latest `zsh` and [`antigen`](https://github.com/zsh-users/antigen):
 
-```sh
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-vim +NeoBundleInstall +qall
+```console
+❯ brew install zsh antigen
+```
+
+(`sudo`) edit `/etc/shells`:
+
+```
+# Delete
+/bin/zsh
+
+# Add
+/usr/local/bin/zsh
+```
+
+Change your shell to `zsh`:
+
+```console
+❯ chsh -s /usr/local/bin/zsh
 ```
 
 
-## Features
+## Install latest `vim` and `NeoBundle`
 
-Tab completion is added to rake and cap commands:
+Install latest `vim`:
 
-```sh
-rake db:mi<tab>
-cap de<tab>
+```console
+❯ brew install vim
 ```
 
-To speed things up, the results are cached in local .rake_tasks~ and .cap_tasks~. It is smart enough to expire the cache automatically in most cases, but you can simply remove the files to flush the cache.
+Install [NeoBundle.vim](https://github.com/Shougo/neobundle.vim):
 
-If you're using git, you'll notice the current branch name shows up in the prompt while in a git repository.
+```console
+❯ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+❯ sh ./install.sh
+❯ rm ./install.sh
+```
 
-There are several features enabled in Ruby's irb including history and completion. Many convenience methods are added as well such as "ri" which can be used to get inline documentation in IRB. See irbrc file for details.
+Install configured bundles (`vim` plugins):
+
+```console
+❯ vim +NeoBundleInstall +qall
+```
 
 
 ## Uninstall
 
-To remove the dotfile configs, run the following commands. Be certain to double check the contents of the files before removing so you don't lose custom settings.
+**WARNING**: Be certain to double check the contents of the files before unlinking, so you don't lose custom settings.
 
-```sh
-unlink ~/.bin
-unlink ~/.gitignore
-unlink ~/.gemrc
-unlink ~/.gitconfig
-unlink ~/.gvimrc
-unlink ~/.irbrc
-unlink ~/.vim
-unlink ~/.vimrc
-unlink ~/.zshrc
-rm -rf ~/dotfiles
-rm -rf ~/oh-my-zsh
+Unlink all the dotfiles:
+
+```console
+❯ rake uninstall
+❯ rm -rf ~/dotfiles
 ```
 
-To change back to Bash:
+Change back your shell to `bash`:
 
-```sh
-chsh -s /bin/bash
+```console
+❯ chsh -s /bin/bash
 ```
-
