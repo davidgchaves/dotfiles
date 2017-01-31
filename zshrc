@@ -30,17 +30,6 @@ source $(brew --prefix nvm)/nvm.sh
 # Cask (emacs)
 export PATH="$HOME/.cask/bin:$PATH"
 
-# Aliases
-alias bower='./node_modules/.bin/bower'
-alias browserify='./node_modules/.bin/browserify'
-alias gulp='./node_modules/.bin/gulp'
-alias karma='./node_modules/.bin/karma'
-alias mocha='./node_modules/.bin/mocha'
-alias nodemon='./node_modules/.bin/nodemon'
-alias surge='./node_modules/.bin/surge'
-alias webpack='./node_modules/.bin/webpack'
-alias webpack-dev-server='./node_modules/.bin/webpack-dev-server'
-
 ##############################################
 # Manually configure VI Mode                 #
 # http://dougblack.io/words/zsh-vi-mode.html #
