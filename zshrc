@@ -10,6 +10,9 @@ antigen bundle robbyrussell/oh-my-zsh plugins/git
 
 antigen apply
 
+# iTerm2 zsh integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # RVM related
 export PATH="$PATH:$HOME/.rvm/bin"
 
