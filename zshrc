@@ -13,16 +13,6 @@ antigen apply
 # iTerm2 zsh integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# RVM related
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Homebrew related
-export PATH="/usr/local/sbin:$PATH"
-
-# Haskell related (needed for Cabal and PureScript)
-export PATH="$HOME/Library/Haskell/bin:$PATH"
-
-# Java related
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 
