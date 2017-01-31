@@ -20,7 +20,7 @@ export ANDROID_HOME=~/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-# NVM (Node and io) related
+# NVM related
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
