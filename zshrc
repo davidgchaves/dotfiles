@@ -13,8 +13,12 @@ antigen apply
 # iTerm2 zsh integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Java and Android related
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # NVM (Node and io) related
 export NVM_DIR=~/.nvm
