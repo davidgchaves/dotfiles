@@ -9,7 +9,7 @@
 	branch = auto
 [core]
 	excludesfile = /Users/davidgchaves/.gitignore
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [apply]
 	whitespace = nowarn
