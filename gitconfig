@@ -17,3 +17,4 @@
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [init]
 	templatedir = ~/dotfiles/git/git_template
+	defaultBranch = main
