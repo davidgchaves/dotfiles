@@ -143,7 +143,7 @@ set t_Co=256                    " set number of colors to 256
 nnoremap <leader><leader> <c-^>
 
 " insert a hashrocket
-imap <c-l> <space>=><space>
+"imap <c-l> <space>=><space>
 
 " expand directory of current file.
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
