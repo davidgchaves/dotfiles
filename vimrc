@@ -146,7 +146,7 @@ nnoremap <leader><leader> <c-^>
 "imap <c-l> <space>=><space>
 
 " expand directory of current file.
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
+"cnoremap %% <C-R>=expand('%:h').'/'<CR>
 
 " switch to the left Split.
 nnoremap <c-h> <c-w>h
